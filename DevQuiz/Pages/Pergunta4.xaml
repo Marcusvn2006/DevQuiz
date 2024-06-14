@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DevQuiz.Pages.Pergunta4"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Pergunta4"
+    BackgroundColor="#FEDF22">
+    <VerticalStackLayout>
+        <Label
+            Margin="30"
+            FontAttributes="Bold"
+            FontSize="24"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Text="O que o Sol é?"
+            VerticalOptions="Center" />
+
+        <WebView
+            Margin="0,0,0,20"
+            HeightRequest="200"
+            Source="https://www.youtube.com/embed/tBLLuZvuyYw?si=c8hHRzqe45-k0dk6"
+            WidthRequest="320" />
+
+        <Border
+            x:Name="rstColor"
+            Margin="30,0"
+            Padding="0,20"
+            Stroke="#1e1e1e"
+            StrokeShape="RoundRectangle 20"
+            StrokeThickness="3">
+            <VerticalStackLayout>
+                <RadioButton
+                    Margin="30,0"
+                    CheckedChanged="Verificar"
+                    Content="Estrela"
+                    FontSize="20"
+                    Value="1" />
+
+                <RadioButton
+                    Margin="30,0"
+                    CheckedChanged="Verificar"
+                    Content="Buraco negro"
+                    FontSize="20"
+                    Value="0" />
+
+                <RadioButton
+                    Margin="30,0"
+                    CheckedChanged="Verificar"
+                    Content="Planeta"
+                    FontSize="20"
+                    Value="0" />
+
+                <RadioButton
+                    Margin="30,0"
+                    CheckedChanged="Verificar"
+                    Content="Todas estão erradas"
+                    FontSize="20"
+                    Value="0" />
+            </VerticalStackLayout>
+        </Border>
+
+        <Button
+            x:Name="btnResponder"
+            Margin="30,50"
+            Padding="10,20"
+            Clicked="btnResponder_Clicked"
+            FontAttributes="Bold"
+            FontSize="24"
+            Text="RESPONDER" />
+
+    </VerticalStackLayout>
+</ContentPage>

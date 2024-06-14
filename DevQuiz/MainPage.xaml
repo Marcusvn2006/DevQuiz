@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DevQuiz.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    BackgroundColor="#FEDF22"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#FEDF22" StatusBarStyle="DarkContent" />
+    </ContentPage.Behaviors>
+
+    <ScrollView>
+        <VerticalStackLayout Margin="30">
+            <Image
+                Aspect="AspectFit"
+                HeightRequest="250"
+                Source="logo.svg" />
+
+            <Label
+                Margin="30"
+                FontAttributes="Bold"
+                FontSize="36"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="Teste Seus Conhecimentos" />
+
+            <Button
+                x:Name="btnIniciar"
+                Margin="30,50"
+                Padding="0,20"
+                Clicked="btnIniciar_Clicked"
+                FontAttributes="Bold"
+                FontSize="24"
+                HorizontalOptions="Fill"
+                Text="INICIAR" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

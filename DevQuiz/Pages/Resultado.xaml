@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DevQuiz.Pages.Resultado"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Resultado"
+    BackgroundColor="#FEDF22"
+    NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label
+                Margin="30,50,30,30"
+                FontAttributes="Bold"
+                FontSize="48"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="RESULTADO FINAL"
+                VerticalOptions="Center" />
+
+            <Image
+                Aspect="AspectFit"
+                HeightRequest="250"
+                Source="logo.svg" />
+
+            <Label
+                x:Name="lblNome"
+                Margin="0,20,0,0"
+                FontSize="24"
+                HorizontalTextAlignment="Center"
+                Text="Olá, Fulano" />
+
+            <Label
+                Margin="0,0"
+                FontSize="24"
+                HorizontalTextAlignment="Center"
+                Text="Sua nota foi" />
+
+            <Label
+                x:Name="lblNota"
+                Margin="0,20"
+                FontAttributes="Bold"
+                FontSize="96"
+                HorizontalTextAlignment="Center"
+                Text="85" />
+            <Button
+                x:Name="BtnInicio"
+                Margin="30,50"
+                Padding="10,20"
+                Clicked="BtnInicio_Clicked"
+                FontAttributes="Bold"
+                FontSize="24"
+                Text="Jogar Novamente" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

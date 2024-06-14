@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DevQuiz.Pages.Pergunta1"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Pergunta 1"
+    BackgroundColor="#FEDF22">
+    <VerticalStackLayout>
+        <Label
+            Margin="30"
+            FontAttributes="Bold"
+            FontSize="24"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Text="Quem Descobriu o Brasil?"
+            VerticalOptions="Center" />
+        <Border
+            x:Name="rstColor"
+            Margin="30,0"
+            Padding="0,20"
+            Stroke="#1e1e1e"
+            StrokeShape="RoundRectangle 20"
+            StrokeThickness="3">
+            <VerticalStackLayout>
+                <RadioButton
+                    Margin="30,0"
+                    CheckedChanged="Verificar"
+                    Content="Cristóvão Colombo"
+                    FontSize="20"
+                    Value="0" />
+
+                <RadioButton
+                    Margin="30,0"
+                    CheckedChanged="Verificar"
+                    Content="Dom Pedro I"
+                    FontSize="20"
+                    Value="0" />
+
+                <RadioButton
+                    Margin="30,0"
+                    CheckedChanged="Verificar"
+                    Content="Pedro Álvares Cabral"
+                    FontSize="20"
+                    Value="1" />
+
+                <RadioButton
+                    Margin="30,0"
+                    CheckedChanged="Verificar"
+                    Content="Dom João VI"
+                    FontSize="20"
+                    Value="0" />
+            </VerticalStackLayout>
+        </Border>
+
+        <Button
+            x:Name="btnResponder"
+            Margin="30,50"
+            Padding="10,20"
+            Clicked="btnResponder_Clicked"
+            FontAttributes="Bold"
+            FontSize="24"
+            Text="RESPONDER" />
+
+    </VerticalStackLayout>
+</ContentPage>

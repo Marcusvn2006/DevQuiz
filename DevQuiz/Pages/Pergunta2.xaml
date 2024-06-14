@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DevQuiz.Pages.Pergunta2"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Pergunta 2"
+    BackgroundColor="#FEDF22">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label
+                Margin="30"
+                FontAttributes="Bold"
+                FontSize="24"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="De que país é a bandeira abaixo?"
+                VerticalOptions="Center" />
+
+            <Image Margin="30,0,30,30" Source="bandeira.png" />
+
+            <Border
+                x:Name="rstColor"
+                Margin="30,0"
+                Padding="0,20"
+                Stroke="#1e1e1e"
+                StrokeShape="RoundRectangle 20"
+                StrokeThickness="3">
+                <VerticalStackLayout>
+                    <RadioButton
+                        Margin="30,0"
+                        CheckedChanged="Verificar"
+                        Content="Brasil"
+                        FontSize="20"
+                        Value="0" />
+
+                    <RadioButton
+                        Margin="30,0"
+                        CheckedChanged="Verificar"
+                        Content="Estados Unidos"
+                        FontSize="20"
+                        Value="1" />
+
+                    <RadioButton
+                        Margin="30,0"
+                        CheckedChanged="Verificar"
+                        Content="Inglaterra"
+                        FontSize="20"
+                        Value="0" />
+
+                    <RadioButton
+                        Margin="30,0"
+                        CheckedChanged="Verificar"
+                        Content="Paraguai"
+                        FontSize="20"
+                        Value="0" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Button
+                x:Name="btnResponder"
+                Margin="30,50"
+                Padding="10,20"
+                Clicked="btnResponder_Clicked"
+                FontAttributes="Bold"
+                FontSize="24"
+                Text="RESPONDER" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
